@@ -1,0 +1,13 @@
+package com.gmail.ozerianskyy;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Cat barsik = new Cat("Barsik", "white", "fish", 4.5, 5.2);
+		Cat urga = new Cat("Urga", "ginger", "tuna", 3.2, 4.0);
+		
+		ugra.getVoice();
+
+	}
+}

@@ -1,0 +1,87 @@
+package com.gmail.ozerianskyy;
+
+//public class Main {
+//
+//	public static void main(String[] args) {
+//		int maxNumber=1;
+//		int number;
+//		int max1=1;
+//		int max2=1;
+//		for (int i = 100; i <= 999; i++) {
+//			for (int j = 100; j <= 999; j++) {
+//				number = i * j;
+//				if (palindromeCheck(number) == 1) {
+//					maxNumber = number;
+//					max1=i;
+//					max2=j;
+//					
+//				}
+//			}
+//		}
+//		System.out.println(max1 + "*" + max2 + "=" + maxNumber);
+//	}
+//
+//	public static int palindromeCheck(int number) {
+//		int one = number / 100000;
+//		int two = number % 100000 / 10000;
+//		int three = number % 10000 / 1000;
+//		int four = number % 1000 / 100;
+//		int five = number % 100 / 10;
+//		int six = number % 10;
+//
+//		if (one == six && two == five && three == four) {
+//			return 1;
+//		} else {
+//			return 0;
+//		}
+//	}
+//}
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		palindrom();
+	}
+
+	public static void palindrom() {
+		int pal = 0;
+		int a=0;
+		int b=0;
+		for (int i = 999; i > 99; i--) {
+			for (int j = 999; j > 99; j--) {
+				if (chekPalindrom(i * j)) {
+					if (i * j > pal) {
+						pal = i * j;
+						a=i;
+						b=j;
+					}
+				}
+			}
+		}
+		System.out.println(pal + " "+a+" "+b);
+	}
+
+	public static boolean chekPalindrom(int n) {
+		int n1 = n / 100000;
+		int n2 = n % 100000 / 10000;
+		int n3 = n % 10000 / 1000;
+		int n4 = n % 1000 / 100;
+		int n5 = n % 100 / 10;
+		int n6 = n % 10;
+		if (n < 100000) {
+			if ((n2 == n6) && (n3 == n5)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			if ((n1 == n6) && (n2 == n5) && (n3 == n4)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+}

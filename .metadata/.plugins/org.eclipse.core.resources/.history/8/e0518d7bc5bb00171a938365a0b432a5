@@ -1,0 +1,13 @@
+package com.gmail.ozerianskyy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String text = String.format("%f", Math.PI);
+		
+		System.out.println(text);
+
+	}
+
+}

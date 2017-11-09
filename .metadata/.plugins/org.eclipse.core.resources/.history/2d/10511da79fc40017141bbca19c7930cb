@@ -1,0 +1,39 @@
+package com.gmail.ozerianskyy;
+
+public class Phone {
+
+	private long number;
+	public Phone(long number) {
+		super();
+		this.number = number;
+	}
+
+	public Phone() {
+		super();
+	}
+
+	public long getNumber() {
+		return number;
+	}
+
+	public void setNumber(long number) {
+		this.number = number;
+	}
+
+	public void call(long numberTwo, long[] networkNumbers) {
+		for (int i = 0; ;) {
+			if (number == numberTwo) {
+				System.out.println("ALO ALO");
+				break;
+			} else {
+				i++;
+			}
+			if (i>networkNumbers.length) {
+				System.out.println("invalid number");
+				break;
+			}
+		}
+
+	}
+
+}

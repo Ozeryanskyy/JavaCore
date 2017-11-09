@@ -1,0 +1,39 @@
+package com.gmail.ozerianskyy;
+
+import java.util.Arrays;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int[] a = new int[10];
+		int i = 0;
+		Scanner sc = new Scanner(System.in);
+
+		for (int element : a) {
+
+			System.out.print("Enter " + (i + 1) + "sequence element ");
+			a[i] = sc.nextInt();
+
+			System.out.println(a[i] + " - ");
+
+			i++;
+		}
+
+
+		// if(sequence[3]-sequence[2]==sequence[1]) {
+		// case1;
+		// } else if(sequence[3]/sequence[2]==sequence[1]) {
+		// case2;
+		// } else if(sequence[3]%4==0&&sequence[3]/4%4==0) {
+		// case3;
+		// }
+		//
+		//
+		// static int case1(sequence[]) {
+		//
+		//
+	}
+
+}

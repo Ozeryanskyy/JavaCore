@@ -1,0 +1,40 @@
+package com.gmail.ozerianskyy;
+
+import java.util.Scanner;
+
+public class Main {
+
+	static void numberOut(int a, String[] b) {
+		int n1=a/100;
+		System.out.print(b[n1]+" hundreds ");
+		int n2n3=a-n1;
+		if(n2n3>19) {
+			int n2=n2n3/10;
+			int n3=n2n3-n2;
+			System.out.print(b[18+n2] + b[n3] + " ");
+			
+		}else {
+			System.out.print(b[n2n3]);
+		}
+	}
+
+	public static void main(String[] args) {
+		String[] numerator = { " ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+				"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+				"twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety" };
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+		int millions;
+		int thousands;
+		int units;
+		millions = number / 1000000;
+		thousands = (number - millions) / 1000;
+		units = (number - millions - thousands);
+		numberOut(millions, numerator);
+		numberOut(thousands, numerator);
+		numberOut(units, numerator);
+		
+
+	}
+
+}

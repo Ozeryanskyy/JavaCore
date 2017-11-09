@@ -1,0 +1,32 @@
+package com.gmail.ozerianskyy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int maxNumber;
+		int number;
+		for (int i = 100; i <= 999; i++) {
+			for (int j = 100; j <= 999; j++) {
+				number = i * j;
+				if (palindromeCheck(number) == 1) {
+					maxNumber = number;
+				}
+			}
+		}
+	}
+
+	public static int palindromeCheck(int number) {
+		int one = number / 100000;
+		int two = number % 100000 / 10000;
+		int three = number % 10000 / 1000;
+		int four = number % 1000 / 100;
+		int five = number % 100 / 10;
+		int six = number % 10;
+
+		if (one == six && two == five && three == four) {
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+package com.gmail.ozerianskyy;
+
+public class Square extends Shape {
+
+	private Point a;
+	private Point b;
+	private Point c;
+	private Point d;
+	private double perimetr;
+	private double area;
+
+	public Square(Point a, Point b, Point c, Point d) {
+		super();
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+	}
+
+	public double getPerimetr() {
+
+		double aX = a.getX();
+		double aY = a.getY();
+		double bX = b.getX();
+		double bY = b.getY();
+		double cX = c.getX();
+		double cY = c.getY();
+		double dX = d.getX();
+		double dY = d.getY();
+
+		double ab = Math.sqrt(Math.pow(aX - bX, 2) + Math.pow(aY - bY, 2));
+		double bc = Math.sqrt(Math.pow(bX - cX, 2) + Math.pow(bY - cY, 2));
+		double cd = Math.sqrt(Math.pow(cX - dX, 2) + Math.pow(cY - dY, 2));
+		double da = Math.sqrt(Math.pow(dX - aX, 2) + Math.pow(dY - cY, 2));
+		System.out.println(ab + " " + bc + " " + " " + cd + " " + da);
+		if (ab == bc && bc == cd && cd == da && da == ab) {
+
+			perimetr = ab + bc + cd + da;
+		} else {
+			System.out.println("not a square");
+			perimetr = 0;
+		}
+		return perimetr;
+	}
+
+	public double getArea() {
+		if (perimetr > 0) {
+			area = Math.sqrt(perimetr / 4);
+		} else {
+			System.out.println("not a square");
+			area = 0;
+		}
+		return area;
+	}
+
+}

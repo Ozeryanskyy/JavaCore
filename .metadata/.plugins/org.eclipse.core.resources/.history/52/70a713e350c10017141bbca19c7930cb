@@ -1,0 +1,20 @@
+package com.gmail.ozerianskyy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Car carOne = new Car();
+
+		carOne.color = "red";
+		carOne.year = 1992;
+		carOne.weight = 2000;
+		carOne.acceleration(30);
+
+		Car carTwo = new Car("Blue", 1500, 2009);
+
+		carOne.print();
+		System.out.println();
+		carTwo.print();
+	}
+
+}

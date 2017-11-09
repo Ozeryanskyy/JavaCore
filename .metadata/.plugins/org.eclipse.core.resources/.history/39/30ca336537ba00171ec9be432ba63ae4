@@ -1,0 +1,38 @@
+package com.gmail.ozerianskyy;
+
+import java.util.Arrays;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int[] sequence = new int[10];
+		int i = 0;
+		Scanner sc = new Scanner(System.in);
+
+		for (int element : sequence) {
+
+			System.out.println("Enter " + (i + 1) + " sequence element ");
+			System.out.println("If you want to stop enter <.>");
+			sequence[i] = sc.nextInt();
+			i++;
+		}
+		System.out.println(i);
+
+
+		// if(sequence[3]-sequence[2]==sequence[1]) {
+		// case1;
+		// } else if(sequence[3]/sequence[2]==sequence[1]) {
+		// case2;
+		// } else if(sequence[3]%4==0&&sequence[3]/4%4==0) {
+		// case3;
+		// }
+		//
+		//
+		// static int case1(sequence[]) {
+		//
+		//
+	}
+
+}

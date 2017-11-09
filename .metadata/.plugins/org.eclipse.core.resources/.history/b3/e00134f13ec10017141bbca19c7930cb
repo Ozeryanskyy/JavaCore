@@ -1,0 +1,24 @@
+package com.gmail.ozerianskyy;
+
+import java.util.Arrays;
+
+class Main {
+
+	public static void main(String[] args) {
+
+		int[] result = breakNumber(11111111);
+
+		System.out.println(Arrays.toString(result));
+
+	}
+
+	public static int[] breakNumber(int number) {
+		String numb = "" + number;
+		int[] result = new int[numb.length()];
+		for (int i = 0; i < result.length; i++) {
+			result[i] = Integer.valueOf("" + numb.charAt(i));
+		}
+		return result;
+	}
+
+}

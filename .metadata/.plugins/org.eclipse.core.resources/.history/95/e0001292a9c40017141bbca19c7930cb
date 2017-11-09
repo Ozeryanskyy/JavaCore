@@ -1,0 +1,23 @@
+package com.gmail.ozerianskyy;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Point a = new Point(1, 1);
+		Point b = new Point(1, 3);
+		Point c = new Point(3, 3);
+		Point d = new Point(3, 1);
+		
+		Square square = new Square(a, b, c, d);
+		
+		System.out.println(square.toString());
+		
+		double squarePerimetr = square.getPerimetr();
+		System.out.println(squarePerimetr);
+		
+		double squareArea = square.getArea();
+		System.out.println(squareArea);
+		
+	}
+
+}
